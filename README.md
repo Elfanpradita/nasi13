@@ -16,6 +16,7 @@ tolong tulis sini yang perubahan terakhir (server log)
 11. 4 Jul Selesai semua panel register custom dan migration notif ribet banget anjay :v - elfan
 12. 5 Jul Belom selesai styling pergi ke lipo dulu :p - elfan
 13. 8 Jul Buat register + tambain wa custom livewire lama banget men wkwk :p - elfan
+14. 10 Jul Integrasi kriteria API wa buatan elfan tampan sendiri hehe :p - elfan
 
 
 Backup (kontak elfan ketika akan backup)
@@ -30,4 +31,5 @@ Backup (kontak elfan ketika akan backup)
 8. 1 Jul Server kembali menggunakan ct dengan domain calonsukses.social
 9. 3 Jul Buat Panel, role, permision.
 10. 4 Jul Rapat sama bro Wahyu
-12. 8 Jul pinah db ke central db gua - elfan
+12. 8 Jul pisah db ke central db gua - elfan
+13. 10 buat bot API wa sendiri dong wkwk - elfan
