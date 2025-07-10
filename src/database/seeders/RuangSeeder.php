@@ -14,14 +14,8 @@ class RuangSeeder extends Seeder
     {
         Ruang::create([
             'nomor_ruang' => 'R101',
-            'kapasitas' => '30',
             'branch_company_id' => 1, // Pastikan branch_company dengan ID 1 sudah ada
-        ]);
-
-        Ruang::create([
-            'nomor_ruang' => 'R102',
-            'kapasitas' => '25',
-            'branch_company_id' => 1,
+            'batch_id' => 1,
         ]);
     }
 }

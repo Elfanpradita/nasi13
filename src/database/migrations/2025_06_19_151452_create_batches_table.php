@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('kapasitas');
             $table->boolean('isFull')->default(false);
+            $table->foreignId('pengajar_id')->constrained('pengajars')->onDelete('cascade');
             $table->date('start_registration');
             $table->date('end_registration');
             $table->timestamps();

@@ -21,9 +21,9 @@ class PengajarResource extends Resource
 
     protected static ?string $navigationGroup = "Human Resource Management";
 
-    protected static ?string $navigationLabel = 'Guru';
+    protected static ?string $navigationLabel = 'Pengajar';
 
-    protected static ?string $modelLabel = 'Guru';
+    protected static ?string $modelLabel = 'Pengajar';
 
     public static function form(Form $form): Form
     {

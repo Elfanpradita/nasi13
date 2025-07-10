@@ -12,30 +12,12 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Facades\Filament;
 
 class RuangResource extends Resource
 {
     protected static ?string $model = Ruang::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
-    protected static ?string $navigationGroup = "Elearning Management";
-
-    protected static ?string $navigationLabel = 'Ruang';
-
-    protected static ?string $modelLabel = 'Ruang';
-
-    public static function getEloquentQuery(): Builder
-    {
-        $query = parent::getEloquentQuery();
-
-        $panel = Filament::getCurrentPanel();
-        if ($panel?->getId() === 'edu') {
-            $query->where('nomor_ruang', auth()->user()->id);
-        }
-        return $query;
-    }
 
     public static function form(Form $form): Form
     {
@@ -44,14 +26,21 @@ class RuangResource extends Resource
                 Forms\Components\TextInput::make('nomor_ruang')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Select::make('kapasitas')
+                Forms\Components\Select::make('branch_company_id')
                     ->required()
-                    ->label('Perusahaan Cabang')
+                    ->label('Cabang')
                     ->relationship('branchCompany', 'name'),
-                Forms\Components\TextInput::make('branch_company_id')
-                    
+                Forms\Components\Select::make('batch_id')
+                    ->required()
+                    ->label('Batch')
+                    ->relationship('batch', 'name'),
             ]);
-    }
+        }
+
+    // Forms\Components\Select::make('event_course_id')
+    //                 ->required()
+    //                 ->label('Event Course')
+    //                 ->relationship('eventCourse', 'name'),
 
     public static function table(Table $table): Table
     {
@@ -59,9 +48,11 @@ class RuangResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('nomor_ruang')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('kapasitas')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('branchCompany.name')
+                Tables\Columns\TextColumn::make('branch_company_id')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('batch_id')
+                    ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

@@ -14,8 +14,26 @@ class EventCourseSeeder extends Seeder
     {
         EventCourse::create([
             'nomor_event_course' => 'EVT-202507-001',
-            'name' => 'Kelas Intensif Bahasa Mandarin',
-            'description' => 'Kelas 4 minggu untuk persiapan HSK 3.',
+            'name' => 'Inggris',
+            'description' => 'Belajar Inggris.',
+            'start' => '2025-07-10',
+            'end' => '2025-08-07',
+            'price' => '1500000',
+            'employee_id' => 1, // Pastikan employee dengan ID 1 ada
+        ]);
+        EventCourse::create([
+            'nomor_event_course' => 'EVT-202507-002',
+            'name' => 'Jepang',
+            'description' => 'Belajar Jepang.',
+            'start' => '2025-07-10',
+            'end' => '2025-08-07',
+            'price' => '1500000',
+            'employee_id' => 1, // Pastikan employee dengan ID 1 ada
+        ]);
+        EventCourse::create([
+            'nomor_event_course' => 'EVT-202507-003',
+            'name' => 'Korea',
+            'description' => 'Belajar Korea.',
             'start' => '2025-07-10',
             'end' => '2025-08-07',
             'price' => '1500000',

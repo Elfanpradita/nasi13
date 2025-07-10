@@ -45,6 +45,11 @@ class BatchResource extends Resource
                         'false' => 'False',
                         ])
                     ->required(),
+                Forms\Components\Select::make('pengajar_id')
+                    ->required()
+                    ->label('Pengajar')
+                    ->relationship('pengajar', 'user_id')
+                    ->getOptionLabelFromRecordUsing(fn ($record) => $record->user->name ?? 'Tanpa Nama'),
                 Forms\Components\DatePicker::make('start_registration')
                     ->required(),
                 Forms\Components\DatePicker::make('end_registration')

@@ -16,6 +16,7 @@ class Batch extends Model
         'name',
         'kapasitas',
         'is_full',
+        'pengajar_id',
         'start_registration',
         'end_registration',
     ];
@@ -27,5 +28,15 @@ class Batch extends Model
     public function eventCourse()
     {
         return $this->belongsTo(EventCourse::class);
+    }
+
+    public function pengajar()
+    {
+        return $this->belongsTo(Pengajar::class);
+    }
+
+    public function ruangs()
+    {
+        return $this->hasMany(Ruang::class);
     }
 }

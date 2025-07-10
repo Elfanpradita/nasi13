@@ -17,6 +17,7 @@ class BatchSeeder extends Seeder
             'name' => 'Batch Juli 2025',
             'kapasitas' => '25',
             'isFull' => false,
+            'pengajar_id' => '1',
             'start_registration' => '2025-07-01',
             'end_registration' => '2025-07-09',
         ]);

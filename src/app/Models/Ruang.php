@@ -11,8 +11,8 @@ class Ruang extends Model
 
     protected $fillable = [
         'nomor_ruang',
-        'kapasitas',
         'branch_company_id',
+        'batch_id',
     ];
 
     /**
@@ -26,5 +26,10 @@ class Ruang extends Model
     public function kegiatans()
     {
         return $this->hasMany(Kegiatan::class);
+    }
+
+    public function batch()
+    {
+        return $this->belongsTo(Batch::class);
     }
 }

@@ -21,9 +21,9 @@ class EventCourseResource extends Resource
 
     protected static ?string $navigationGroup = "Learning Management System";
 
-    protected static ?string $navigationLabel = 'Buka Pendaftaran';
+    protected static ?string $navigationLabel = 'Kelas Dijual';
 
-    protected static ?string $modelLabel = 'Buka Pendaftaran';
+    protected static ?string $modelLabel = 'Kelas Dijual';
 
     public static function form(Form $form): Form
     {
